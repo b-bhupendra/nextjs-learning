@@ -165,11 +165,12 @@ async function main() {
  
   const client = await db.connect();
 
-  await seedUsers(client);
-  await seedCustomers(client);
-  await seedInvoices(client);
-  await seedRevenue(client);
+  // await seedUsers(client);
+  // await seedCustomers(client);
+  // await seedInvoices(client);
+  // await seedRevenue(client);
 
+  console.log(client.sql`SELECT * FROM revenue;`);
   await client.end();
 }
 
